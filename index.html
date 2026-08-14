@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music Player</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span>♪</span> Music Player
+        </div>
+
+        <div class="menu-btn" id="menu-btn">☰</div>
+
+<div class="nav-links" id="nav-links">
+    <a href="#player">Player</a>
+    <a href="#playlist">Playlist</a>
+</div>
+
+    </nav>
+
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <main class="container">
+
+
+        <!-- =========================
+             MUSIC PLAYER
+        ========================== -->
+
+        <section class="music-player" id="player">
+
+            <!-- Album Artwork -->
+
+            <div class="album-container">
+
+    <div class="album-design" id="album-cover">
+        ♪
+    </div>
+
+</div>
+
+            <!-- Song Information -->
+
+            <div class="song-info">
+
+                <h1 id="song-title">
+                    Song Title
+                </h1>
+
+                <p id="artist-name">
+                    Artist Name
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 PROGRESS SECTION
+            ========================== -->
+
+            <div class="progress-container">
+
+                <span id="current-time">
+                    00:00
+                </span>
+
+                <input
+                    type="range"
+                    id="progress-bar"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="duration">
+                    00:00
+                </span>
+
+            </div>
+
+
+            <!-- =========================
+                 PLAYER CONTROLS
+            ========================== -->
+
+            <div class="controls">
+
+                <button
+                    id="previous-btn"
+                    class="control-btn"
+                    title="Previous Song"
+                >
+                    ⏮
+                </button>
+
+                <button
+                    id="play-btn"
+                    class="play-btn"
+                    title="Play"
+                >
+                    ▶
+                </button>
+
+                <button
+                    id="next-btn"
+                    class="control-btn"
+                    title="Next Song"
+                >
+                    ⏭
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 VOLUME CONTROLS
+            ========================== -->
+
+            <div class="volume-container">
+
+                <button
+                    id="mute-btn"
+                    class="volume-btn"
+                    title="Mute"
+                >
+                    🔊
+                </button>
+
+                <input
+                    type="range"
+                    id="volume-bar"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                >
+
+            </div>
+
+
+            <!-- =========================
+                 EXTRA CONTROLS
+            ========================== -->
+
+            <div class="extra-controls">
+
+                <button
+                    id="shuffle-btn"
+                    title="Shuffle"
+                >
+                    🔀 Shuffle
+                </button>
+
+                <button
+                    id="repeat-btn"
+                    title="Repeat"
+                >
+                    🔁 Repeat
+                </button>
+
+                <button
+                    id="favorite-btn"
+                    title="Favorite"
+                >
+                    ♡ Favorite
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PLAYLIST
+        ========================== -->
+
+        <section class="playlist-section" id="playlist">
+
+            <div class="playlist-header">
+
+                <h2>
+                    My Playlist
+                </h2>
+
+                <span id="song-count">
+                    5 Songs
+                </span>
+
+            </div>
+
+
+            <div class="playlist" id="playlist-container">
+
+                <!-- Song 1 -->
+
+                <div class="playlist-item active" data-index="0">
+
+                    <div class="playlist-cover">🎵</div>
+                    >
+
+                    <div class="playlist-song-info">
+
+                        <h3>
+                            Bekhudi
+                        </h3>
+
+                        <p>
+                            Nadeem-Shravan
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-duration">
+                        03:45
+                    </span>
+
+                </div>
+
+
+                <!-- Song 2 -->
+
+                <div class="playlist-item" data-index="1">
+
+                    <div class="playlist-cover">🎵</div>
+
+                    <div class="playlist-song-info">
+
+                        <h3>
+                            Toota jo kabhi tara
+                        </h3>
+
+                        <p>
+                            Atif Aslam
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-duration">
+                        04:12
+                    </span>
+
+                </div>
+
+
+                <!-- Song 3 -->
+
+                <div class="playlist-item" data-index="2">
+
+                    <div class="playlist-cover">🎵</div>
+
+                    <div class="playlist-song-info">
+
+                        <h3>
+                            Shiddat title track song
+                        </h3>
+
+                        <p>
+                            Manan Bhardwaj
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-duration">
+                        03:28
+                    </span>
+
+                </div>
+
+
+                <!-- Song 4 -->
+
+                <div class="playlist-item" data-index="3">
+
+                    <div class="playlist-cover">🎵</div>
+
+                    <div class="playlist-song-info">
+
+                        <h3>
+                            Jeene laga hoon
+                        </h3>
+
+                        <p>
+                            Atif Aslam
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-duration">
+                        04:05
+                    </span>
+
+                </div>
+
+
+                <!-- Song 5 -->
+
+                <div class="playlist-item" data-index="4">
+
+                    <div class="playlist-cover">🎵</div>
+
+                    <div class="playlist-song-info">
+
+                        <h3>
+                            I love you
+                        </h3>
+
+                        <p>
+                            Clinton Cerejo
+                        </p>
+
+                    </div>
+
+                    <span class="playlist-duration">
+                        03:52
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Music Player | Designed with HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
